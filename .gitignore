@@ -1,0 +1,37 @@
+# Block sequencing, alignment, and coverage extensions
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+*.bam
+*.sam
+*.bai
+*.bedGraph.gz
+*.bismark.cov.gz
+
+# Block plain text files, visual reports, and R environments
+*.txt
+*.html
+*.jpg
+*.jpeg
+*.Rdata
+*.RData
+*.csv
+*.tsv
+
+# Block specific heavy subdirectories inside coverage folders
+**/Rdata_15x/
+**/fastQC_reports/
+**/meth_extracted_15x/
+**/cov.gz_of_interest/
+genomes_temporal/
+
+# Block temporary editor files and system logs
+*.swp
+*.swo
+.DS_Store
+nohup.out
+
+# Allow scripts, regardless of their directory
+!**/*.R
+!**/*.sh
