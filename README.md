@@ -12,3 +12,15 @@ Here, we present CovGain, an R extension for methylKit that implements a combine
 
 CovGain allows to obtain valuable DNAm data at 15× sequencing depth reducing per-sample costs by approximately 30% and halving bioinformatic storage and processing demands. CovGain is a cost-effective and accessible software that allows to prioritize larger sample sizes maximizing statistical power in epigenomics, which is of particular interest for population-scale studies
 
+## Installation
+
+To install the development version of CovGain directly from GitHub, run the following code in R:
+
+```R
+if (!requireNamespace("remotes", quietly = TRUE)) {
+    install.packages("remotes")
+}
+remotes::install_github("gutierrezrodalvaro/CovGain")
+
+library(CovGain)
+```
