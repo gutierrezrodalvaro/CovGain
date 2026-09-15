@@ -1,0 +1,7 @@
+export(filterByCombinedCpG)
+export(getFilterStats)
+import(methylKit)
+importFrom(data.table,as.data.table)
+importFrom(data.table,setkey)
+importFrom(methods,new)
+importFrom(stats,quantile)
