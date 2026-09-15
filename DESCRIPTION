@@ -1,0 +1,10 @@
+Package: CovGain
+Type: Package
+Title: CovGain: An efficient and cost-effective filtering methodology to improve CpG recovery in DNA methylation studies
+Version: 0.1.0
+Author: Alvaro Gutierrez Rodriguez
+Maintainer: Alvaro Gutierrez Rodal <gutierrezalvaro@uniovi.es>
+Description: Provides functions for an efficient and cost-effective filtering methodology to improve CpG recovery in DNA methylation studies.
+License: MIT
+Encoding: UTF-8
+RoxygenNote: 7.2.3
