@@ -14,13 +14,28 @@ CovGain allows to obtain valuable DNAm data at 15× sequencing depth reducing pe
 
 ## Installation
 
+CovGain requires methylKit (Bioconductor) and data.table (CRAN). The code below installs any missing dependencies and then CovGain from GitHub; packages already installed are skipped.
+
 To install the development version of CovGain directly from GitHub, run the following code in R:
 
 ```R
-if (!requireNamespace("remotes", quietly = TRUE)) {
-    install.packages("remotes")
+# 1. CRAN dependencies (includes remotes, BiocManager and data.table)
+for (pkg in c("remotes", "BiocManager", "data.table")) {
+  if (!requireNamespace(pkg, quietly = TRUE)) {
+    install.packages(pkg)
+  }
 }
-remotes::install_github("gutierrezrodalvaro/CovGain")
 
+# 2. Bioconductor Dependencies
+if (!requireNamespace("methylKit", quietly = TRUE)) {
+  BiocManager::install("methylKit", update = FALSE, ask = FALSE)
+}
+
+# 3. CovGain (development version from GitHub)
+if (!requireNamespace("CovGain", quietly = TRUE)) {
+  remotes::install_github("gutierrezrodalvaro/CovGain", upgrade = "never")
+}
+
+# 4. Load CovGain library
 library(CovGain)
 ```
